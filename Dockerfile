@@ -5,4 +5,4 @@ RUN pip3 install urllib3
 RUN apt-get install python3-bs4
 RUN pip3 install pymongo
 
-CMD [ "python3", "./hello.py"]
+CMD [ "python3", "./snapdeal_csv_scrap_1.py"]
