@@ -198,9 +198,6 @@ def callEachProductsWithURL(url):
 
 def storeDataIntoDB(mainList,product_id):
     print(mainList)
-    with open('/snapdealout/testfile.txt', 'wb') as myFile:
-        myFile.write(product_id)
-        myFile.write('\n')
 
 # call this method at the initial time for fetching data from the mysql#
 def callInitProducts():
@@ -212,9 +209,6 @@ def callInitProducts():
                 try:
                     url_name = url[0]
                     print(url_name)
-                    with open('/snapdealout/testfile.txt', 'wb') as myFile:
-        		myFile.write(product_id)
-        		myFile.write('\n')
                     pool.apply_async(callEachProductsWithURL, args=(url_name,))
                 except Exception as inst:
                     print(inst)
