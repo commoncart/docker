@@ -198,8 +198,9 @@ def callEachProductsWithURL(url):
 
 def storeDataIntoDB(mainList,product_id):
     print(mainList)
-    with open('/snapdir/'+product_id+'.csv', 'wb') as myFile:
-        myFile.write(mainList)
+    with open('/snapdealout/testfile.txt', 'wb') as myFile:
+        myFile.write(product_id)
+        myFile.write('\n')
 
 # call this method at the initial time for fetching data from the mysql#
 def callInitProducts():
