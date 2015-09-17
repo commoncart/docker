@@ -212,6 +212,9 @@ def callInitProducts():
                 try:
                     url_name = url[0]
                     print(url_name)
+                    with open('/snapdealout/testfile.txt', 'wb') as myFile:
+        		myFile.write(product_id)
+        		myFile.write('\n')
                     pool.apply_async(callEachProductsWithURL, args=(url_name,))
                 except Exception as inst:
                     print(inst)
