@@ -84,12 +84,6 @@ headers = {
 
 # call this method to execut the call of each product URL's#
 def callEachProductsWithURL(url):
-    with open('/snapdealout/processedurls.csv', 'wb') as myFile:
-        myFile.write(url)
-        myFile.write('\n')
-    with open('/snapdir/processedurls.csv', 'wb') as myFile:
-        myFile.write(url)
-        myFile.write('\n')
     r = http.request('GET',url,headers=headers)
     print(r.status)
     if(r.status == 200):
