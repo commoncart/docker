@@ -87,7 +87,7 @@ def callEachProductsWithURL(url):
     with open('/snapdealout/processedurls.csv', 'wb') as myFile:
         myFile.write(url)
         myFile.write('\n')
-    with open('/snapdeal/processedurls.csv', 'wb') as myFile:
+    with open('/snapdir/processedurls.csv', 'wb') as myFile:
         myFile.write(url)
         myFile.write('\n')
     r = http.request('GET',url,headers=headers)
