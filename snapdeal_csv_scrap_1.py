@@ -198,14 +198,14 @@ def callEachProductsWithURL(url):
 
 def storeDataIntoDB(mainList,product_id):
     print(mainList)
-    with open(''+product_id+'.csv', 'wb') as myFile:
+    with open('/snapdir'+product_id+'.csv', 'wb') as myFile:
         myFile.write(mainList)
 
 # call this method at the initial time for fetching data from the mysql#
 def callInitProducts():
     if __name__ == '__main__':
         pool = mp.Pool()
-        with open(sys.argv[1], 'r') as csvfile:
+        with open('/snapdir/' + sys.argv[1], 'r') as csvfile:
             urls = csv.reader(csvfile, delimiter=' ', quotechar='|')
             for url in urls:
                 try:
