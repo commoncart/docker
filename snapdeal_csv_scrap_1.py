@@ -84,6 +84,7 @@ headers = {
 
 # call this method to execut the call of each product URL's#
 def callEachProductsWithURL(url):
+    print('test')
     r = http.request('GET',url,headers=headers)
     print(r.status)
     if(r.status == 200):
