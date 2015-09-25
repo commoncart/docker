@@ -211,6 +211,12 @@ def callInitProducts():
                 try:
                     url_name = url[0]
                     print(url_name)
+                    print('test')
+                    r = http.request('GET',url_name,headers=headers)
+                    print(r.status)
+                    print(r)
+                    data = r.data.decode('utf-8')
+                    print(data)
                     pool.apply_async(callEachProductsWithURL, args=(url_name,))
                 except Exception as inst:
                     print(inst)
