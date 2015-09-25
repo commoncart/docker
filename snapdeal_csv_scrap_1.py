@@ -104,6 +104,7 @@ def callEachProductsWithURL(url):
         image_url= ''
 
         soup = BeautifulSoup(r.data.decode('utf-8'),"lxml")
+        print(soup)
         mainList = {}
         bc_list = list()
         if soup.find('div',{'id':'breadCrumbWrapper2'}) is not None:
